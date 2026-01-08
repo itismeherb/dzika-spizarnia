@@ -20,10 +20,10 @@ export default function ProductPage() {
   ] as const;
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <div className="grid gap-12 md:grid-cols-2">
+    <div className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-16">
+      <div className="grid gap-8 md:gap-12 md:grid-cols-2">
         {/* Image */}
-        <div className="overflow-hidden rounded-3xl bg-zinc-100 h-[500px]">
+        <div className="overflow-hidden rounded-3xl bg-zinc-100 h-64 md:h-[500px]">
           <img
             src={product.image}
             alt={product.name}
@@ -52,7 +52,7 @@ export default function ProductPage() {
                 <button
                   key={key}
                   onClick={() => setTab(key)}
-                  className={`flex-1 px-6 py-4 text-sm font-medium uppercase tracking-wide transition-colors ${
+                  className={`flex-1 px-3 py-3 md:px-6 md:py-4 text-xs md:text-sm font-medium uppercase tracking-wide transition-colors ${
                     tab === key
                       ? "bg-zinc-50 text-zinc-900 border-b-2 border-zinc-900"
                       : "text-zinc-500 hover:text-zinc-900 hover:bg-zinc-50"
@@ -64,7 +64,7 @@ export default function ProductPage() {
             </div>
 
             {/* Tab content */}
-            <div className="p-6 min-h-[200px]">
+            <div className="p-4 md:p-6 min-h-[150px] md:min-h-[200px]">
               <div className="whitespace-pre-line text-zinc-500 leading-relaxed">
                 {product[tab]}
               </div>
@@ -72,18 +72,18 @@ export default function ProductPage() {
           </div>
 
           {/* Actions */}
-          <div className="mt-6 flex gap-4">
+          <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href={product.shopUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 rounded-xl bg-black px-8 py-4 text-center text-sm font-medium text-white transition hover:bg-zinc-800"
+              className="flex-1 rounded-xl bg-black px-6 py-3 md:px-8 md:py-4 text-center text-sm font-medium text-white transition hover:bg-zinc-800"
             >
               Kup teraz
             </a>
             <Link
               to="/"
-              className="rounded-xl border border-zinc-300 px-8 py-4 text-center text-sm font-medium transition hover:bg-zinc-100"
+              className="rounded-xl border border-zinc-300 px-6 py-3 md:px-8 md:py-4 text-center text-sm font-medium transition hover:bg-zinc-100"
             >
               Wróć
             </Link>
