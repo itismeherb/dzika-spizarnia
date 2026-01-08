@@ -133,7 +133,7 @@ Stosować jako dodatek do napojów lub przemywania skóry.
   {
     id: "masc-z-krwawnika-na-oliwie-extra-virgin",
     name: "Maść z krwawnika na oliwie extra virgin",
-    price: 22,
+    price: 30,
     quantity: 90,
     quantity_unit: "ml",
     image: "/images/masc_z_krwawnika.jpg",
