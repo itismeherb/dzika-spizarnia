@@ -1,7 +1,7 @@
-import { Routes, Route } from "react-router-dom";
-import ProductCard from "./components/ProductCard";
-import ProductPage from "./pages/ProductPage";
-import { products } from "./data/products";
+import { Routes, Route } from 'react-router-dom';
+import ProductCard from './components/ProductCard';
+import ProductPage from './pages/ProductPage';
+import { products } from './data/products';
 
 export default function App() {
   return (
@@ -9,9 +9,7 @@ export default function App() {
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="text-sm font-semibold tracking-wide text-zinc-800">
-            DZIKA SPIŻARNIA
-          </span>
+          <span className="text-sm font-semibold tracking-wide text-zinc-800">DZIKA SPIŻARNIA</span>
 
           <nav className="space-x-6 text-sm font-medium text-zinc-600">
             <a href="/#oferta" className="transition hover:text-zinc-900">
@@ -38,10 +36,9 @@ export default function App() {
                     DZIKA SPIŻARNIA
                   </h1>
                   <p className="text-zinc-500 leading-relaxed">
-                    Tworzę naturalne octy, soki i syropy z miłości do zdrowia i
-                    naturalnych składników. Wszystkie produkty powstają ręcznie,
-                    w małych partiach, z owoców, ziół i korzeni pochodzących
-                    prosto z natury.
+                    Tworzę naturalne octy, soki i syropy z miłości do zdrowia i naturalnych
+                    składników. Wszystkie produkty powstają ręcznie, w małych partiach, z owoców,
+                    ziół i korzeni pochodzących prosto z natury.
                     <br />
                     <span className="mt-2 block text-zinc-400">
                       Naturalnie. Lokalnie. Z sercem.
@@ -70,9 +67,7 @@ export default function App() {
       {/* FOOTER */}
       <footer id="kontakt" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row">
-          <p className="text-xs text-zinc-500">
-            © {new Date().getFullYear()} DZIKA SPIŻARNIA
-          </p>
+          <p className="text-xs text-zinc-500">© {new Date().getFullYear()} DZIKA SPIŻARNIA</p>
 
           <div className="flex gap-4 text-xs text-zinc-500">
             <a

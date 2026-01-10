@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type ProductCardProps = {
   id: string;
@@ -22,7 +22,7 @@ export default function ProductCard({
   return (
     <div className="group flex flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-white transition hover:-translate-y-1 hover:shadow-xl">
       {/* Image */}
-      <div className="relative h-56 w-full flex-shrink-0 overflow-hidden">
+      <div className="relative h-56 w-full shrink-0 overflow-hidden">
         <img
           src={image}
           alt={name}
