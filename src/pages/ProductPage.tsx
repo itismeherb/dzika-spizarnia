@@ -80,41 +80,45 @@ export default function ProductPage() {
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-zinc-700">Wybierz rozmiar:</label>
               <div className="flex flex-wrap gap-2">
-                {product.variants.map((v, i) => {
-                  const selected = i === variantIndex;
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setVariantIndex(i)}
-                      className={`rounded-xl px-4 py-2.5 text-sm font-medium transition ${
-                        selected
-                          ? 'bg-black text-white'
-                          : v.sellable
-                            ? 'bg-zinc-100 hover:bg-zinc-200'
-                            : 'bg-zinc-100 text-zinc-400 line-through hover:bg-zinc-200'
-                      }`}
-                    >
-                      <div className="flex flex-col items-center gap-0.5">
-                        <span>
-                          {v.quantity}
-                          {v.quantity_unit}
-                        </span>
-                        <span
-                          className={`text-xs ${
-                            selected
-                              ? 'text-zinc-300'
-                              : v.sellable
-                                ? 'text-zinc-500'
-                                : 'text-zinc-400'
-                          }`}
-                        >
-                          {v.price} zł
-                        </span>
-                      </div>
-                    </button>
-                  );
-                })}
+                {product.variants
+                  .slice() // kopiujemy tablicę, żeby nie modyfikować oryginału
+                  .sort((a, b) => a.quantity - b.quantity) // sortowanie po quantity rosnąco
+                  .map((v, i) => {
+                    const originalIndex = product.variants.indexOf(v); // żeby wiedzieć, który indeks w stanie
+                    const selected = originalIndex === variantIndex;
+                    return (
+                      <button
+                        key={originalIndex}
+                        type="button"
+                        onClick={() => setVariantIndex(originalIndex)}
+                        className={`rounded-xl px-4 py-2.5 text-sm font-medium transition ${
+                          selected
+                            ? 'bg-black text-white'
+                            : v.sellable
+                              ? 'bg-zinc-100 hover:bg-zinc-200'
+                              : 'bg-zinc-100 text-zinc-400 line-through hover:bg-zinc-200'
+                        }`}
+                      >
+                        <div className="flex flex-col items-center gap-0.5">
+                          <span>
+                            {v.quantity}
+                            {v.quantity_unit}
+                          </span>
+                          <span
+                            className={`text-xs ${
+                              selected
+                                ? 'text-zinc-300'
+                                : v.sellable
+                                  ? 'text-zinc-500'
+                                  : 'text-zinc-400'
+                            }`}
+                          >
+                            {v.price} zł
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
               </div>
             </div>
           )}

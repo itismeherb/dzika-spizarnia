@@ -42,6 +42,14 @@ export const products: Product[] = [
         price: 40,
         shopUrl: 'https://www.olx.pl/d/oferta/masc-wrotyczowa-90-ml-CID3647-ID18Y423.html',
       },
+      {
+        sellable: true,
+        quantity: 20,
+        quantity_unit: 'ml',
+        price: 15,
+        shopUrl:
+          'https://www.olx.pl/d/oferta/masc-z-wrotyczu-50-ml-ostatnie-sztuki-CID3647-ID17ylhD.html',
+      },
     ],
     sellableExternally: true,
     sellableThroughMessages: false,
