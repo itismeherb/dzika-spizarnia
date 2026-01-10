@@ -50,6 +50,14 @@ export const products: Product[] = [
         shopUrl:
           'https://www.olx.pl/d/oferta/masc-z-wrotyczu-50-ml-ostatnie-sztuki-CID3647-ID17ylhD.html',
       },
+      {
+        sellable: true,
+        quantity: 30,
+        quantity_unit: 'ml',
+        price: 20,
+        shopUrl:
+          'https://www.olx.pl/d/oferta/masc-z-wrotyczu-50-ml-ostatnie-sztuki-CID3647-ID17ylhD.html',
+      },
     ],
     sellableExternally: true,
     sellableThroughMessages: false,
