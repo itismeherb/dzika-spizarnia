@@ -83,7 +83,7 @@ export default function ProductPage() {
                 {product.variants
                   .slice() // kopiujemy tablicę, żeby nie modyfikować oryginału
                   .sort((a, b) => a.quantity - b.quantity) // sortowanie po quantity rosnąco
-                  .map((v, i) => {
+                  .map((v) => {
                     const originalIndex = product.variants.indexOf(v); // żeby wiedzieć, który indeks w stanie
                     const selected = originalIndex === variantIndex;
                     return (
@@ -142,9 +142,7 @@ export default function ProductPage() {
                 </button>
               ))}
             </div>
-            <div className="p-6 min-h-[200px] whitespace-pre-line text-zinc-600">
-              {product[tab]}
-            </div>
+            <div className="p-6 min-h-50 whitespace-pre-line text-zinc-600">{product[tab]}</div>
           </div>
 
           {/* ACTIONS – JEDNO STAŁE MIEJSCE */}
