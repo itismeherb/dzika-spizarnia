@@ -20,7 +20,7 @@ export default function App() {
       productId: product.id,
       variantIndex,
       name: product.name,
-      image: product.image,
+      image: variant.image,
       price: variant.price,
       quantity: variant.quantity,
       quantity_unit: variant.quantity_unit,

@@ -34,6 +34,7 @@ export default function ProductPage() {
 
   const variant = product.variants[variantIndex];
 
+  const image = variant.image;
   const isAvailable = variant.sellable;
   const showBuy = isAvailable && product.sellableExternally && !!variant.shopUrl;
   const showMessage = !showBuy && product.sellableThroughMessages;
@@ -51,7 +52,7 @@ export default function ProductPage() {
         {/* IMAGE */}
         <div className="relative overflow-hidden rounded-3xl bg-zinc-100">
           <img
-            src={product.image}
+            src={image}
             alt={product.name}
             className="h-full w-full object-cover aspect-square"
           />
