@@ -503,7 +503,8 @@ export const products: Product[] = [
         quantity: 250,
         quantity_unit: 'ml',
         price: 15,
-        shopUrl: '',
+        shopUrl:
+          'https://www.olx.pl/d/oferta/zywy-ocet-nawlociowy-250-ml-CID757-ID17ZbxQ.html?reason=seller_listing',
       },
     ],
     sellableExternally: true,
