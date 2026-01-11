@@ -436,4 +436,77 @@ export const products: Product[] = [
     sellableExternally: true,
     sellableThroughMessages: false,
   },
+  {
+    id: 'zywy-ocet-wrotyczowy',
+    name: 'Żywy ocet wrotyczowy',
+    image: '/images/zywy_ocet.jpg',
+    description: `
+      Żywy ocet wrotyczowy – 250 ml
+
+      Naturalny, niepasteryzowany ocet wytwarzany metodą fermentacji z dodatkiem wrotyczu.
+      Zachowuje żywe kultury fermentacyjne oraz naturalny aromat roślinny.
+    `,
+    sklad: `
+      • wrotycz
+      • woda
+    `,
+    zastosowanie: `
+      • do spożycia po rozcieńczeniu
+      • jako dodatek do potraw, sosów i marynat
+      • do domowych napojów fermentowanych
+    `,
+    dzialanie: `
+      • wspiera naturalne procesy trawienne
+      • pomaga w utrzymaniu prawidłowego metabolizmu
+      • wykazuje działanie antyoksydacyjne
+    `,
+    variants: [
+      {
+        sellable: true,
+        quantity: 250,
+        quantity_unit: 'ml',
+        price: 15,
+        shopUrl:
+          'https://www.olx.pl/d/oferta/zywy-ocet-z-wrotyczu-250-ml-CID757-ID17ZakI.html?reason=seller_listing',
+      },
+    ],
+    sellableExternally: true,
+    sellableThroughMessages: false,
+  },
+  {
+    id: 'zywy-ocet-nawlociowy',
+    name: 'Żywy ocet nawłociowy',
+    image: '/images/zywy_ocet.jpg',
+    description: `
+      Żywy ocet nawłociowy – 250 ml
+
+      Naturalny, niepasteryzowany ocet wytwarzany metodą fermentacji z dodatkiem nawłoci.
+      Zachowuje żywe kultury fermentacyjne oraz delikatny, ziołowo-kwiatowy aromat.
+    `,
+    sklad: `
+      • nawłoć
+      • woda
+    `,
+    zastosowanie: `
+      • do spożycia po rozcieńczeniu
+      • jako dodatek do potraw, sosów i dressingów
+      • do domowych napojów fermentowanych
+    `,
+    dzialanie: `
+      • wspiera naturalne procesy trawienne
+      • wspomaga funkcjonowanie układu moczowego
+      • wykazuje działanie antyoksydacyjne
+    `,
+    variants: [
+      {
+        sellable: true,
+        quantity: 250,
+        quantity_unit: 'ml',
+        price: 15,
+        shopUrl: '',
+      },
+    ],
+    sellableExternally: true,
+    sellableThroughMessages: false,
+  },
 ];
